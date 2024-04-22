@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental Website</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>House Rental Website</h1>
+        <form id="rentalForm">
+            <fieldset>
+                <legend>Availability:</legend>
+                <div class="form-group">
+                    <input type="radio" id="available" name="availability" value="yes">
+                    <label for="available">Available</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="notAvailable" name="availability" value="no">
+                    <label for="notAvailable">Not Available</label>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <!-- Other form fields... -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        // Add your JavaScript code here
+        const form = document.getElementById("rentalForm");
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            // Perform form validation here
+            // ...
+            alert("Form submitted successfully!");
+        });
+    </script>
+</body>
+</html>
